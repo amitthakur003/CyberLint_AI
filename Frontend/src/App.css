@@ -1,0 +1,103 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Left Side (Editor) */
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+  color: #f8f8f2;  /* Ensures better visibility */
+  font-family: "Fira Code", monospace;
+}
+
+/* Review Button */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: background 0.3s ease;
+}
+
+main .left .review:hover {
+  background-color: rgb(180, 180, 250);
+}
+
+/* Markdown Output (Right Panel) */
+main .right {
+  background-color: #282828;  /* Slightly lighter for better contrast */
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  overflow: auto;
+  color: #e0e0e0;  /* Lighter text for better readability */
+  font-family: "Fira Code", monospace;
+}
+
+/* Markdown Code Blocks */
+main .right pre {
+  background: #1e1e1e !important;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  overflow-x: auto;
+}
+
+main .right code {
+  font-family: "Fira Code", monospace;
+  background-color: #121212;
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #50fa7b; /* Green text for inline code */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+    height: auto;
+  }
+}
