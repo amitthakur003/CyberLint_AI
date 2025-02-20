@@ -6,10 +6,16 @@ CyberLint_Ai is an AI-driven code review tool that analyzes your code and provid
 
 Tech Stack:
 Frontend: React, Markdown, rehype-highlight, Prism.js
+
 Backend: Node.js, Express.js
+
 AI Integration: Google Gemini API
+
 Styling: Tailwind CSS
+
 Version Control: Git & GitHub
+
+
 How to Use:
 Enter your code in the editor.
 Click "Review" to get AI-powered feedback.
